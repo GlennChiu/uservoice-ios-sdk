@@ -294,10 +294,11 @@
 - (void)loadView {
     [super loadView];
     self.navigationItem.title = NSLocalizedStringFromTable(@"Feedback & Support", @"UserVoice", nil);
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTable(@"Close", @"UserVoice", nil)
-                                                                              style:UIBarButtonItemStylePlain
-                                                                             target:self
-                                                                             action:@selector(dismissUserVoice)] autorelease];
+#warning Refactor
+//    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTable(@"Close", @"UserVoice", nil)
+//                                                                              style:UIBarButtonItemStylePlain
+//                                                                             target:self
+//                                                                             action:@selector(dismissUserVoice)] autorelease];
 
     self.scrollView = [[[UIScrollView alloc] initWithFrame:[self contentFrame]] autorelease];
     self.view = scrollView;
